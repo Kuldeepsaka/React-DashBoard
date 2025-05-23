@@ -1,0 +1,78 @@
+@use '../../styles/base/variables' as *;
+
+
+.auth-form{
+    margin-top: 24px;
+
+input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        -webkit-text-fill-color: black !important;
+        /* Override text color */
+        -webkit-box-shadow: 0 0 0px 1000px #8a8989 inset !important;
+        /* Override background color */
+        border: 1px solid transparent !important;
+        /* Override border */
+    }
+
+
+    a{
+        color: $linkColor;
+        font-size: 16px;
+            padding: 3px 0;
+    }
+    .auth-btn{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .input-right{
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        
+        button {
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                color: $linkColor;
+                font-weight: 500;
+            }
+    }
+
+        .otp-grid {
+            display: flex;
+            gap: 10px;
+            
+           input{
+            padding: 0.75rem 1rem;
+                padding-right: 2.5rem;
+                border-radius: 0.5rem;
+                background-color: transparent;
+                border: 1px solid #666;
+                color: #fff;
+                font-size: 1rem;
+            
+                &:focus {
+                    outline: none;
+                    border-color: gold;
+                }
+           }
+        }
+        
+}
+.auth-card{
+    p{
+        color: $authSecondary;
+    }
+}
+.input-error{
+    color: $danger;
+        position: absolute;
+        bottom: -27px;
+}

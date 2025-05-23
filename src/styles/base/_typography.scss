@@ -1,0 +1,77 @@
+h1, .h1 {
+  @include heading-1;
+  margin-bottom: $spacer * 1.5;
+}
+
+h2, .h2 {
+  @include heading-2;
+  margin-bottom: $spacer * 1.25;
+}
+
+h3, .h3 {
+  @include heading-3;
+  margin-bottom: $spacer;
+}
+
+h4, .h4 {
+  @include heading-4;
+  margin-bottom: $spacer * 0.75;
+}
+
+p {
+  @include body-text;
+  margin-bottom: $spacer;
+}
+
+.text-sm {
+  @include small-text;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-accent {
+  color: $accent;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-muted {
+  color: $gray-600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

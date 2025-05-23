@@ -1,0 +1,73 @@
+@use '../../../styles//base/variables' as *;
+
+.offcanvas-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.offcanvas-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 580px;
+    border-radius: 20px;
+    background: $canvasBg;
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1051;
+    display: none;
+    overflow-y: auto;
+    padding: 20px;
+    display: none; // Default hidden
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+        width: 80% !important;
+    }
+
+    .canvas-btn {
+        background: #1E1E1E;
+        border-radius: 20px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 20px;
+        margin-top: 20px;
+        font-size: 16px;
+        color: $white;
+        transition: 0.3s ease-in-out 0.2s;
+        width: 100%;
+
+        &:hover {
+            background: $btnHover;
+            color: $black;
+        }
+    }
+}
+
+.wallet-connect {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.offcanvas-close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: $white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.2) rotate(90deg);
+    }
+}

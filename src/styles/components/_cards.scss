@@ -1,0 +1,88 @@
+.card {
+  @include card;
+  margin-bottom: $spacer * 1.5;
+  border: none;
+  
+  .card-header {
+    padding: $spacer * 1.25 $spacer * 1.5;
+    background-color: transparent;
+    border-bottom: 1px solid $gray-200;
+    
+    h5, h6 {
+      margin-bottom: 0;
+    }
+  }
+  
+  .card-body {
+    padding: $spacer * 1.5;
+  }
+  
+  .card-footer {
+    padding: $spacer * 1.25 $spacer * 1.5;
+    background-color: transparent;
+    border-top: 1px solid $gray-200;
+  }
+}
+
+// Stat card
+.stat-card {
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    @include flex-center;
+    border-radius: $border-radius;
+  }
+}
+
+// Activity card
+.timeline {
+  .timeline-item {
+    position: relative;
+    
+    .timeline-icon {
+      width: 32px;
+      height: 32px;
+      @include flex-center;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Task card
+.task-list {
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacer * 0.75;
+    border-radius: $border-radius;
+    
+    &:hover {
+      background-color: $gray-100;
+    }
+    
+    .form-check-input:checked + .form-check-label {
+      text-decoration: line-through;
+      color: $gray-600;
+    }
+  }
+}
+
+// Color swatch for theme selection
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: $spacer * 0.5;
+}
+
+// Success icon
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba($success, 0.1);
+  @include flex-center;
+  margin: 0 auto;
+}

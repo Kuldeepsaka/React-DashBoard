@@ -1,0 +1,73 @@
+// Reset box-sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Remove default margin and padding
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+// Set core body defaults
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $font-family-base;
+  color: $gray-900;
+  background-color: $gray-100;
+}
+
+// Make images easier to work with
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Remove list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Remove default styles from links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Set up base app container
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

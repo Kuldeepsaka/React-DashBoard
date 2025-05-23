@@ -1,0 +1,8 @@
+@use '../../styles/base/variables' as *;
+
+.invest-action {
+    color: $linkColor;
+    background-color:none;
+    font-weight: 500;
+    cursor: pointer;
+}

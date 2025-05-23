@@ -1,0 +1,38 @@
+.auth-layout {
+  display: grid;
+  grid-template-rows: 1fr auto; // main content + footer
+  min-height: 100vh;
+  width: 100%;
+  background-color: $auth-bg-color;
+  position: relative;
+  z-index: 0;
+  font-family: $authFont;
+
+  &::after{
+    background-image: url('/assets/bg-mask.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    content:' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .auth-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: $footer;
+    font-size: 0.875rem;
+    color:$authColor;
+  }
+}

@@ -1,0 +1,75 @@
+@use '../../styles/base/variables' as *;
+
+.common-table {
+    margin-top: 1rem;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: transparent;
+        color: $white;
+        border: none;
+
+        thead {
+            
+
+            th {
+                padding: 18px;
+                background-color: #30291F;
+                    color: $white;
+                    white-space: nowrap;
+                font-weight: 500;
+                font-size: 16px;
+                text-align: left;
+                border-bottom: 0px;
+                &:first-child{
+                    border-radius: 20px 0 0 0px;
+                    padding-left: 25px;
+                }
+                &:last-child{
+                    border-radius: 0px 20px 0px 0px;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                transition: background-color 0.3s;
+
+                &:hover {
+                    // background-color: red;
+                }
+
+                td {
+                    padding: 21px 17px;
+                    background: $black-2;
+                    border-bottom: 1px solid $gray-900;
+                    color: $gray-600;
+                    &:first-child{
+                        padding-left: 24px;
+                    }
+                }
+                
+                &:last-child {
+                    td{
+                        border: 0px;
+                    }
+                    td:first-child {
+                      border-radius: 0px 0 0px 20px;
+                    }
+                    td:last-child {
+                      border-radius: 0px 0 20px 0px;
+                    }
+                }
+            }
+
+            .text-center {
+                text-align: center;
+                color: $gray-500;
+                font-style: italic;
+            }
+        }
+    }
+
+   
+}

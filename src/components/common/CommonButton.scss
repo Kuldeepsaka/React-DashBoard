@@ -1,0 +1,43 @@
+@use '../../styles/base/variables' as *;
+.common-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: $btnHover;
+    border: none;
+    border-radius: 10px;
+    color: $black;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    span{
+        width: 100%;
+    }
+
+    &.cancel-btn{
+        background: none;
+        border: 1px solid $linkColor;
+        color: $linkColor;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        background: $btnHover;
+        color: $black;
+        // border:1px solid transparent;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    &.loading {
+        pointer-events: none;
+    }
+}

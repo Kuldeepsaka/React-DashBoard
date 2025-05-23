@@ -1,0 +1,47 @@
+@use '../../styles/base/variables' as *;
+.User-info {
+
+    ul {
+        background: $black-2;
+        padding: 0 24px;
+        border-radius: 16px;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            p {
+                font-size: 14px;
+                color: $gray-500;
+
+                strong {
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &.change-password{
+        ul{
+            li{
+                display: inline-block;
+                width: 100%;
+                h3{
+                    display: flex;
+                        padding: 20px 0 20px 0;
+                        gap: 12px;
+                    
+                }
+                p{
+                   text-align: left;
+                }
+            }
+        }
+    }
+}

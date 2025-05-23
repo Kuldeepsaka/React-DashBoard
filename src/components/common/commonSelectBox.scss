@@ -1,0 +1,58 @@
+@use '../../styles/base/variables' as *;
+
+.common-select-wrapper {
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        color: $white;
+    }
+
+    .form-select {
+        background-color: $select-bg;
+        border: 0px solid ;
+        color: $select-text;
+        padding-right: 2.5rem;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236c757d' strokeWidth='2'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 12px 8px;
+        appearance: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $select-hover;
+        }
+
+        &:focus {
+            border-color: $select-focus;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        option {
+            color: $select-text;
+            background-color: $white;
+        }
+    }
+
+    .form-select-sm {
+        font-size: 0.875rem;
+        padding: 0.25rem 2.25rem 0.25rem 0.75rem;
+    }
+
+    .form-select-lg {
+        font-size: 1.25rem;
+        padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+    }
+
+    .is-invalid {
+        border-color: #dc3545;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.navbar {
+  padding: $spacer * 0.75 $spacer * 1.5;
+  background-color: $white;
+  box-shadow: $box-shadow-sm;
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: $spacer * 0.5;
+    
+    svg {
+      width: 32px;
+      height: 32px;
+      color: $primary;
+    }
+    
+    .brand-text {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      color: $gray-700;
+      font-weight: 500;
+      padding: $spacer * 0.5 $spacer * 0.75;
+      
+      &:hover, &:focus {
+        color: $primary;
+      }
+      
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: $spacer * 0.5;
+    
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .navbar-expand-lg {
+    .navbar-nav {
+      .nav-link {
+        padding-left: $spacer;
+        padding-right: $spacer;
+      }
+    }
+  }
+}

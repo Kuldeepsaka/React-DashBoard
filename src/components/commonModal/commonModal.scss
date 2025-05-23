@@ -1,0 +1,47 @@
+@use '../../styles/base/variables' as *;
+
+.common-modal {
+        border-radius: $border-radius-lg;
+        box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(33px);
+        width: 100%;
+
+        .btn-close {
+                filter: invert(0.8);
+                transition: transform 0.2s ease, filter 0.3s ease;
+        
+                &:hover {
+                        transform: rotate(90deg);
+                    filter: invert(1) ;
+                }
+            }
+
+
+    .modal-content {
+        border-radius: 16px;
+        padding: 40px;
+        background: $authCardBg;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: $white;
+        .modal-header, .modal-footer, .modal-body{
+            padding: 0;
+            border: 0;
+        }
+        .back-to-previous{
+            cursor: pointer;
+            font-weight: 500;
+            color: $linkColor;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .modal-footer {
+        border-top: none;
+        justify-content: flex-end;
+        .common-btn{
+            margin: 0;
+        }
+    }
+}

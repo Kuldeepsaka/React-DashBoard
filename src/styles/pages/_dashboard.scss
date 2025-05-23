@@ -1,0 +1,320 @@
+p {
+  margin: 0px;
+  padding: 0;
+}
+
+.dashboard-layout {
+  min-height: 100vh;
+  font-family: $authFont;
+  color: $authColor;
+  background: $mainBg;
+
+  &-content {
+    margin-left: 0;
+    padding-top: $header-height;
+    transition: margin-left 0.3s ease;
+
+    @include respond-to(lg) {
+      margin-left: $sidebar-width;
+    }
+
+    &.sidebar-collapsed {
+      @include respond-to(lg) {
+        margin-left: $sidebar-width-collapsed;
+      }
+    }
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $header-height;
+    background: $headerBg;
+    @include flex-between;
+    padding: 0 $spacer * 1.5;
+    z-index: $zindex-sticky;
+    backdrop-filter: blur(33px);
+    transition: left 0.3s ease;
+
+    @media screen and (min-width: 320px) and (max-width: 639px) {
+      padding: 0 $spacer * 0.5;
+    }
+
+    @include respond-to(lg) {
+      left: $sidebar-width;
+    }
+
+    &.sidebar-collapsed {
+      @include respond-to(lg) {
+        left: $sidebar-width-collapsed;
+      }
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      padding-left: 7px;
+
+      .sidebar-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $white;
+        padding: $spacer * 0.5;
+        margin-right: $spacer;
+        border-radius: $border-radius;
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+          margin-right: 0px;
+        }
+
+        @include respond-to(lg) {
+          display: none;
+        }
+
+        &:hover {
+          color: $linkColor;
+        }
+
+        svg {
+          width: 40px;
+          height: 40px;
+
+          @media screen and (min-width: 320px) and (max-width: 480px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      .header-title {
+        font-weight: 600;
+        font-size: 1.25rem;
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: $spacer;
+
+      .common-btn span {
+        font-weight: 400;
+        display: flex;
+        gap: $spacer * 0.2;
+      }
+
+    }
+  }
+
+  .main-content {
+    .page-wrapper {
+      padding: 25px;
+    }
+
+  }
+
+  .footer {
+    border-top: 2px solid $gray-900;
+    text-align: center;
+    padding: 20px 0;
+    color: $gray-600;
+  }
+}
+
+
+.dashboard-content {
+  .section-01 {
+    margin: -0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-col {
+      padding: 0.5rem;
+
+      .card {
+        border-radius: 20px;
+        mix-blend-mode: normal;
+        color: $authColor;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .card-content {
+          p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
+          }
+        }
+
+        h5 {
+          font-size: 28px;
+          font-weight: 700;
+          padding-top: 10px;
+        }
+      }
+
+      &.card-1 .card {
+        background: $headerCardOne;
+      }
+
+      &.card-2 .card {
+        background: $headerCardTwo;
+      }
+
+      &.card-3 .card {
+        background: $headerCardThree;
+      }
+
+      &.card-4 .card {
+        background: $headerCardFour;
+      }
+    }
+  }
+
+  .dash-card {
+    background: $cardBg;
+    color: $authColor;
+    border-radius: 20px;
+    padding: 0;
+    position: relative;
+
+    &.team-card {
+      overflow: hidden;
+
+      p {
+        color: $gray-600;
+        padding-bottom: 10px;
+      }
+
+      ::after {
+        position: absolute;
+        content: '';
+        background: #F6CE8D;
+        width: 96.16px;
+        height: 102.22px;
+        background-blend-mode: screen;
+        mix-blend-mode: normal;
+        filter: blur(26px);
+        border-radius: 129.135px;
+        bottom: -60px;
+        right: -60px;
+      }
+    }
+
+  }
+
+  .small_card {
+    background: $smallCard;
+    color: $authColor;
+    padding: 10px 15px;
+    min-width: 22%;
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      width: 49%;
+    }
+
+    p {
+      font-size: 14px;
+
+      h5 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.set-position {
+  min-height: 250px;
+
+  .animate {
+    top: 10px;
+    right: 208px;
+
+    h5 {
+      font-size: 35px;
+      position: absolute;
+      text-align: center;
+      top: 65px;
+      line-height: 24px;
+      left: 38px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .animate-01 {
+    top: -72px;
+    right: 0px;
+
+    h5 {
+      font-size: 35px;
+      position: absolute;
+      text-align: center;
+      top: 109px;
+      line-height: 24px;
+      left: 88px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .set-position {
+    min-height: auto;
+
+    .animate,
+    .animate-01 {
+      position: unset !important;
+
+      h5 {
+        position: unset;
+        text-align: left;
+        padding: 25px 0px;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1650px) {
+
+  .set-position {
+    min-height: 250px;
+
+    .animate {
+      top: 101px;
+      right: auto;
+    }
+
+    .animate-01 {
+
+      h5 {}
+    }
+
+    img {}
+  }
+
+}

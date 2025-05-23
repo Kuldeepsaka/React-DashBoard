@@ -1,0 +1,36 @@
+@use '../../styles/base/variables' as *;
+.Withdrawal-btn{
+    max-width: 200px;
+}
+
+.custom-card{
+    background: $cardBg2;
+    backdrop-filter:blur(33px);
+    .card-body{
+display: flex;
+    flex-wrap: wrap;
+    .row{
+        width: 100%;
+    }
+
+    .reward-col{
+        padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-right: 1px solid $gray-900;
+            &:last-child{
+                border-right: none;
+            }
+        p{
+            font-size: 18px;
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+    }
+  
+}

@@ -1,0 +1,30 @@
+@use '../../styles/base/variables' as *;
+.custom-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 201px;
+    width: 100%;
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    max-width: 100%;
+}
+.common-input {
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        width: 100%;
+        margin: 0px;
+    }
+}
+    .search-icon {
+        position: absolute;
+        right: 10px;
+        color: $gray-600;
+    }
+
+    input {
+        padding-left: 30px;
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+                max-width: 100%;
+            }
+    }
+}
